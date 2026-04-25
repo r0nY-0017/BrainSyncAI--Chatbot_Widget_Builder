@@ -2,7 +2,8 @@
 
 BrainSync AI is a powerful SaaS platform that allows anyone to create a custom AI-powered chatbot by simply uploading documents or providing website URLs. Once trained, you get a lightweight JavaScript snippet that you can embed into any website to provide instant, intelligent support to your visitors.
 
-![BrainSync AI Banner](https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000)
+<img width="1919" height="933" alt="image" src="https://github.com/user-attachments/assets/144bda77-ffc8-4ab7-89b8-04b99a369523" />
+
 
 ## ✨ Features
 
