@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainSync AI - Train Your Custom Bot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-elements">
+        <canvas id="neural-canvas"></canvas>
+        <div class="grid-bg"></div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">BrainSync<span>AI</span></div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="container hero" id="dashboard">
+            <h1>Create an AI Chatbot from your Data</h1>
+            <p>Upload a PDF, document, or provide a URL. Get a fully working, intelligent chatbot widget for your website in seconds. Supports both English and Bangla.</p>
+        </section>
+
+        <!-- Actual App (Upload Section) -->
+        <section class="container upload-section">
+            <div class="glass-card">
+                <h2>Generate Your Chatbot Now</h2>
+                
+                <div class="tabs">
+                    <button class="tab active" onclick="switchTab('file')">Upload File</button>
+                    <button class="tab" onclick="switchTab('url')">Website URL</button>
+                </div>
+
+                <form id="kb-form" class="kb-form">
+                    <div id="file-input-group" class="input-group">
+                        <div class="drop-zone" id="drop-zone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="upload-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                            <p>Drag & drop your file here, or <span class="highlight">browse</span></p>
+                            <span class="file-info">Supports .txt, .pdf, .docx, .csv</span>
+                            <input type="file" id="file-upload" name="files" accept=".txt,.pdf,.docx,.csv" multiple hidden>
+                        </div>
+                        <div id="file-list" class="file-list-container"></div>
+                    </div>
+
+                    <div id="url-input-group" class="input-group hidden">
+                        <input type="url" id="url-input" name="url" placeholder="https://example.com/data">
+                    </div>
+
+                    <button type="submit" class="btn-primary" id="submit-btn">
+                        <span id="btn-text">Generate Chatbot Widget</span>
+                        <div class="loader hidden" id="btn-loader"></div>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Result Section -->
+        <section class="container result-section hidden" id="result-section">
+            <div class="glass-card success-card">
+                <h2>🎉 Your Chatbot is Ready!</h2>
+                <p>Copy and paste the following snippet into the <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code> of your website.</p>
+                
+                <div class="code-block">
+                    <pre><code id="embed-code-display">&lt;script src="..."&gt;&lt;/script&gt;</code></pre>
+                    <button class="copy-btn" id="copy-btn" onclick="copyCode()">Copy</button>
+                </div>
+                
+                <div class="test-bot-notice">
+                    <p>You can also test the bot right now by clicking the widget that just appeared in the bottom right corner of this page!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

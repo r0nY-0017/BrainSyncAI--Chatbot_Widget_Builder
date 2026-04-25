@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+venv/
+env/
+.DS_Store
+node_modules/
+static/ # Since we use templates as static
